@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passport Express | Seamless Passport Services</title>
+    <meta name="description" content="A redesigned, intuitive passport application experience for the modern citizen.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="glass-nav">
+            <div class="container container-nav">
+                <div class="logo-group" onclick="router.navigate('/')">
+                    <div class="logo-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <span class="logo-text">Passport<span class="express">Express</span></span>
+                </div>
+                <nav id="main-nav">
+                    <!-- Dynamic links here -->
+                </nav>
+                <div id="auth-nav" class="auth-buttons">
+                    <!-- Dynamic auth buttons here -->
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content (Managed by Router) -->
+        <main id="router-view" class="main-content">
+            <!-- Dynamic components will load here -->
+             <div class="loading-spinner">
+                 <div class="spinner"></div>
+             </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <div class="container footer-grid">
+                <div class="footer-info">
+                    <div class="logo-group">
+                        <div class="logo-icon small">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <span class="logo-text">Passport<span class="express">Express</span></span>
+                    </div>
+                    <p>Redesigning the citizen experience for a digital India.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#">Document Checklist</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Grievance Redressal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Anshumat Foundation. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
