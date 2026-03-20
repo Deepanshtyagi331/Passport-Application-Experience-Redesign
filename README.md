@@ -1,4 +1,5 @@
-# Passport Express - Redesigned Citizen Experience
+# Passport Express - Redesigned Citizen Experience  
+**🔥 Live Demo: [Deploying on Vercel...](#)**
 
 Welcome to **Passport Express**, a modern, intuitive, and high-performance redesign of the passport application process. This project focuses on simplifying the journey for first-time applicants, students, and non-tech-savvy users using a clean, accessible interface.
 
@@ -69,6 +70,13 @@ Reviewers can use the following seeded account to test the complete flow:
 5. **Interactive Booking**: A dedicated screen for PSK selection and slot booking.
 6. **Confetti & Delight**: Celebratory UX patterns upon successful submission.
 7. **Responsive Design**: Fully functional on mobile and desktop.
+
+## ☁️ Deployment (Vercel Ready)
+
+The repository is pre-configured for **0-config deployment** on Vercel:
+1.  Connect this GitHub repo to [Vercel](https://vercel.com/new).
+2.  Import `Deepanshtyagi331/Passport-Application-Experience-Redesign`.
+3.  Vercel will detect the `vercel.json` and deploy both the **Python Flask Backend** and the **Vanilla Frontend** as a integrated monorepo.
 
 ---
 
