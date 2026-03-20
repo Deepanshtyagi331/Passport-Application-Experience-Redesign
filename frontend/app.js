@@ -100,7 +100,7 @@ function LandingPage() {
             <div class="container">
                 <h1>Global Travel Starts with <br><span class="express">Seamless Identity.</span></h1>
                 <p>The smartest, fastest, and most intuitive way to apply for your Indian Passport. Designed for the modern citizen.</p>
-                <div class="auth-buttons" style="justify-content: center;">
+                <div class="btn-group" style="justify-content: center; margin-top: 2rem;">
                     <button class="btn btn-primary" onclick="router.navigate('/login')">Get Started Now <i data-lucide="arrow-right"></i></button>
                     <button class="btn btn-secondary">Learn More</button>
                 </div>
@@ -108,7 +108,7 @@ function LandingPage() {
         </section>
 
         <section class="features container">
-            <div class="grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 4rem;">
+            <div class="grid grid-2-col" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 4rem;">
                 <div class="glass form-card" style="padding: 2rem;">
                     <div class="logo-icon" style="margin-bottom: 1rem;"><i data-lucide="zap"></i></div>
                     <h3>Fast-Track Forms</h3>
@@ -214,7 +214,7 @@ function OnboardingPage() {
                         <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 3rem;">Ready to apply for your new passport? Let's get you prepared in under 10 minutes.</p>
                     </center>
 
-                    <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 3rem;">
+                    <div class="grid grid-2-col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 3rem;">
                         <div style="display: flex; gap: 1rem;">
                             <i data-lucide="clock" style="color: var(--primary);"></i>
                             <div>
@@ -298,7 +298,7 @@ function FormPage() {
                     </h2>
                     
                     <div id="application-form">
-                        <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="grid grid-2-col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
                             <div class="form-group">
                                 <label>Applicant's Given Name</label>
                                 <input type="text" name="given_name" class="form-control" placeholder="Enter as per Aadhaar" value="${app.given_name || ''}">
@@ -310,7 +310,7 @@ function FormPage() {
                             </div>
                         </div>
 
-                        <div class="grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                        <div class="grid grid-2-col" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
                             <div class="form-group">
                                 <label>Date of Birth</label>
                                 <input type="date" name="dob" class="form-control" value="${app.dob || ''}">
@@ -341,7 +341,7 @@ function FormPage() {
                         </div>
                     </div>
 
-                    <div style="display: flex; justify-content: space-between; margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
+                    <div class="btn-group" style="justify-content: space-between; margin-top: 3rem; border-top: 1px solid var(--border); padding-top: 2rem;">
                         <button class="btn btn-secondary" onclick="router.navigate('/dashboard')">Save as Draft</button>
                         <button class="btn btn-primary" onclick="router.navigate('/document-upload')">Next: Document Upload <i data-lucide="chevron-right"></i></button>
                     </div>
@@ -400,7 +400,7 @@ function DocumentUploadPage() {
                         </div>
                     </div>
 
-                    <div style="display: flex; justify-content: space-between; margin-top: 3rem;">
+                    <div class="btn-group" style="justify-content: space-between; margin-top: 3rem;">
                         <button class="btn btn-secondary" onclick="router.navigate('/apply')"><i data-lucide="chevron-left"></i> Back</button>
                         <button class="btn btn-primary" onclick="router.navigate('/appointment')">Next: Book Appointment <i data-lucide="chevron-right"></i></button>
                     </div>
@@ -457,7 +457,7 @@ function AppointmentPage() {
                         <p style="font-size: 0.9rem; margin:0;"><strong>Available Slot:</strong> Friday, 28th March 2025 at 10:15 AM has 124 seats available.</p>
                     </div>
 
-                    <div style="display: flex; justify-content: space-between; margin-top: 3rem;">
+                    <div class="btn-group" style="justify-content: space-between; margin-top: 3rem;">
                         <button class="btn btn-secondary" onclick="router.navigate('/document-upload')"><i data-lucide="chevron-left"></i> Back</button>
                         <button class="btn btn-primary" onclick="router.navigate('/confirmation')">Confirm & Pay <i data-lucide="credit-card"></i></button>
                     </div>
@@ -494,13 +494,13 @@ function ConfirmationPage() {
                     <p><strong>Queue Token:</strong> A124</p>
                 </div>
 
-                <div style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
                     <button class="btn btn-primary" style="justify-content: center;" onclick="downloadReceipt()">
                         <i data-lucide="download"></i> Download Acknowledgement Receipt (PDF)
                     </button>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                        <button class="btn btn-secondary" style="justify-content: center;" onclick="router.navigate('/dashboard')">Go to Dashboard</button>
-                        <button class="btn btn-secondary" style="justify-content: center;"><i data-lucide="share-2"></i> Share Status</button>
+                    <div class="btn-group" style="justify-content: center;">
+                        <button class="btn btn-secondary" style="flex: 1; justify-content: center;" onclick="router.navigate('/dashboard')">Go to Dashboard</button>
+                        <button class="btn btn-secondary" style="flex: 1; justify-content: center;"><i data-lucide="share-2"></i> Share Status</button>
                     </div>
                 </div>
             </div>
@@ -647,6 +647,23 @@ function render(component, params) {
     view.innerHTML = component(params);
     lucide.createIcons();
     updateNav();
+
+    // Reset mobile menu on navigation
+    document.body.classList.remove('nav-active');
+    const menuToggle = document.getElementById('menu-toggle');
+    if (menuToggle) {
+        menuToggle.onclick = () => {
+            document.body.classList.toggle('nav-active');
+            const icon = menuToggle.querySelector('i');
+            if (document.body.classList.contains('nav-active')) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        };
+    }
+
 
     // Event Listeners
     if (component === LoginPage) {
